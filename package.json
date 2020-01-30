@@ -1,0 +1,26 @@
+{
+  "name": "team-gen",
+  "version": "1.0.0",
+  "description": "generate the team",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "inquirer": "^7.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eschwelgin/team-bio.git"
+  },
+  "author": "ES",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eschwelgin/team-bio/issues"
+  },
+  "homepage": "https://github.com/eschwelgin/team-bio#readme"
+}

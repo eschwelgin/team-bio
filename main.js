@@ -1,7 +1,14 @@
 const inquirer = require ("inquirer")
-const fs = require ("fs")
+const fs = require ("fs");
+const Employee = require("./classes/employee");
 
 //next up build classes and import / export 
 
-const Employee = require("./employee.js")
+
+
+
+const jimbo = new Employee()
+jimbo.test()
+
+
 
