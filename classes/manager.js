@@ -5,7 +5,7 @@ class Manager extends Employee {
         super(name, id, email)
         this.room = room;
     }
-    getRole() {
+    getRole = function() {
         return "Manager";
     }
 }

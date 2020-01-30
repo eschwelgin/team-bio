@@ -1,8 +1,8 @@
 class Employee {
-    constructor(name, id, title) {
+    constructor(name, id, email) {
         this.name = name
         this.id = id
-        this.title = title
+        this.email = email
     }
     getName = function() {
         return this.name
