@@ -7,6 +7,10 @@ const Manager = require("./classes/manager");
 let employeeList = []
 let employeeCount = 0
 
+function createHtml(employeeList) {
+  
+}
+
 function createIntern() {
     // console.log(name0)
     const questions = [
@@ -30,13 +34,14 @@ function createIntern() {
     inquirer
     .prompt(questions)
     .then(answers => {
-        console.log(answers.name0, answers.id0, answers.email0, answers.school0);
-        employeeList.push({})
-        employeeList[employeeCount].title = "Intern"
-        employeeList[employeeCount].name = answers.name0 
-        employeeList[employeeCount].id = answers.id0, 
-        employeeList[employeeCount].email = answers.email0, 
-        employeeList[employeeCount].school = answers.school0
+        // console.log(answers.name0, answers.id0, answers.email0, answers.school0);
+        const intern = new Intern(answers.name0, answers.id0, answers.email0, answers.room0)
+        employeeList.push(intern)
+        // employeeList[employeeCount].title = "Intern"
+        // employeeList[employeeCount].name = answers.name0 
+        // employeeList[employeeCount].id = answers.id0, 
+        // employeeList[employeeCount].email = answers.email0, 
+        // employeeList[employeeCount].school = answers.school0
         createEmployee()
         })
 }
@@ -64,13 +69,14 @@ function createEngineer() {
     inquirer
     .prompt(questions)
     .then(answers => {
-        console.log(answers.name0, answers.id0, answers.email0, answers.github0);
-        employeeList.push({})
-        employeeList[employeeCount].title = "Engineer"
-        employeeList[employeeCount].name = answers.name0 
-        employeeList[employeeCount].id = answers.id0, 
-        employeeList[employeeCount].email = answers.email0, 
-        employeeList[employeeCount].github = answers.github0
+        // console.log(answers.name0, answers.id0, answers.email0, answers.github0);
+        const engineer = new Engineer(answers.name0, answers.id0, answers.email0, answers.github0)
+        employeeList.push(engineer)
+        // employeeList[employeeCount].title = "Engineer"
+        // employeeList[employeeCount].name = answers.name0 
+        // employeeList[employeeCount].id = answers.id0, 
+        // employeeList[employeeCount].email = answers.email0, 
+        // employeeList[employeeCount].github = answers.github0
         createEmployee()
         })
 }
@@ -99,12 +105,13 @@ function createManager() {
     .prompt(questions)
     .then(answers => {
         // console.log(answers.name0, answers.id0, answers.email0, answers.room0);
-        employeeList.push({})
-        employeeList[employeeCount].title = "Manager"
-        employeeList[employeeCount].name = answers.name0 
-        employeeList[employeeCount].id = answers.id0, 
-        employeeList[employeeCount].email = answers.email0, 
-        employeeList[employeeCount].room = answers.room0
+        const manager = new Manager(answers.name0, answers.id0, answers.email0, answers.room0)
+        employeeList.push(manager)
+        // employeeList[employeeCount].title = "Manager"
+        // employeeList[employeeCount].name = answers.name0 
+        // employeeList[employeeCount].id = answers.id0, 
+        // employeeList[employeeCount].email = answers.email0, 
+        // employeeList[employeeCount].room = answers.room0
         createEmployee()
         })
     
@@ -124,12 +131,13 @@ function choiceFn(choice) {
     } else {
         console.log("Finished, Creating Docs")
         console.log(employeeList)
+        createHtml(employeeList)
     }
 }
 
 function createEmployee() {
     employeeCount++
-    console.log(employeeCount)
+    // console.log(employeeCount)
     const questions = [
         {   type: "list",
             message: "Create Another Employee?",
