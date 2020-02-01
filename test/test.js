@@ -1,7 +1,7 @@
-// const Employee = require(".././classes/employee.js");
-// const Engineer = require(".././classes/engineer.js");
-// const Intern = require(".././classes/intern");
-// const Manager = require(".././classes/manager");
+const Employee = require(".././classes/employee.js");
+const Engineer = require(".././classes/engineer.js");
+const Intern = require(".././classes/intern");
+const Manager = require(".././classes/manager");
 const Main = require(".././main.js")
 
 // const jimbo = new Engineer()
@@ -11,6 +11,7 @@ const Main = require(".././main.js")
 // const kimbo = new Manager
 // console.log(kimbo.getRole())
 
-test('choiceFn = Manager', () => {
-    expect(main.choiceFn("Create Manager")).toBe("Manager");
+test('Manager', () => {
+  q = new Manager('name', 'id', 'email', 'room')
+    expect(q.getRole()).toBe("Manager");
   });

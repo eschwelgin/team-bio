@@ -6,7 +6,7 @@ class Intern extends Employee {
         this.other = school;
     }
     getSchool() {
-        return this.school;
+        return this.other;
     }
     getRole = function() {
         return "Intern";
